@@ -1,0 +1,75 @@
+* { /*regra reset - aplicará para todas as tags possíveis, usa-se para padronizar o doc, ex: todas as margens serão 0px*/
+    margin: 0;
+    padding: 0;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    background: rgb(54,77,204);
+    background: linear-gradient(149deg, rgba(54,77,204,1) 0%, rgba(33,47,125,1) 100%); 
+}
+
+h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 100;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.avatar {
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 20px white;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly; /*só funciona se o display estiver habilitado com flex*/
+    list-style: none;
+    margin: 20px 0px /*dois parametros no short hand, o primeiro para top e bottom, e o segundo para left e right*/
+}
+
+.social img{ /*regra aninhada: acesso a class social, e a/as tags img que estão dentro dela*/
+    width: 33px;
+}
+
+.links-list {
+    list-style: none;
+}
+
+.links-list li{
+    margin: 10px 20px;
+}
+
+.links-list li a {
+    text-decoration: none; /*remove a linha sublinhada do link*/
+    display: block; /*essa propriedade bloqueia o inline, e transforma a tag numa espécie de bloco, para que se comporte como se fosse uma div*/
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    color: rgb(54,77,204);
+    font-weight: bold;
+}
+
+.links-list li a span {
+    display: block; /*a tag span também é inline, ou seja, propriedades de bloco como margin não se aplicam, a não ser que se altere o display para block*/
+    color:gray;
+    margin-top: 10px;
+    font-weight: 100;
+}
